@@ -1,0 +1,98 @@
+﻿@model IEnumerable<Shop_DottiesShoes.Models.CT_HoaDonBan>
+
+@{
+    ViewBag.Title = "viewCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title> Dotie Shoes-Cart</title>
+<head>
+    <link rel="stylesheet" href="/Assets/Website/Css/Cart interface.css">
+</head>
+<div id="main" class="grid">
+    <div class="Product-title">
+        <h1 class="title">GIỎ HÀNG CỦA BẠN</h1>
+    </div>
+    @if (Session["cart"] != null)
+    {
+        <div class="ok"></div>
+        <div class="box-content">
+            <div class="container-table">
+                <table class="table-cart">
+                    <thead class="head-table">
+                        @*<tr>
+                                <th class="img"></th>
+                                <th class="item"></th>
+                                <th class="remove"></th>
+                            </tr>*@
+                    </thead>
+                    <tbody class="list-cart" id="listCart">
+                        @foreach (var sp in Model)
+                        {
+                            <tr>
+                                <td class="img">
+                                    <div class="product-img">
+                                        <img src="@sp.SanPham.HinhAnh">
+                                    </div>
+                                </td>
+                                <td class="item">
+                                    <h3> <a href="/Html/Product interface.html">@sp.SanPham.TenSP @sp.SanPham.MauSac</a></h3>
+                                    <small class="delete-product" data-id="@sp.SanPham.MaSP"><i class="fa-solid fa-trash-can"></i></small>
+                                    <p><span class="pri"> Đơn Giá:   @string.Format("{0:#,##0.đ}", sp.SanPham.GiaSale)</span></p>
+                                    <p><span class="event"> Kích Thước : 4UK </span></p>
+                                    <div class="ds-click">
+                                        <button id="btnGiam-@sp.SanPham.MaSP" class=" min ds-btn">-</button>
+                                        <input type="text" class="ds-input" id="sl-@sp.SanPham.MaSP" data-id="@sp.SanPham.MaSP" value="@sp.SoLuong">
+                                        <button id="btnTang-@sp.SanPham.MaSP" class=" plus ds-btn">+</button>
+                                    </div>
+                                </td>
+                                <td class="end-pay">
+                                    <p class="end-payy"> @string.Format("{0:#,##0.₫}", sp.SoLuong * sp.SanPham.GiaSale)</p>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <div class="service-cart">
+                    <button class="delete-cart" id="btnDeleteAll">Xoá giỏ hàng</button>
+                    <button class="update-cart" id="UpdateCart">Cập nhật giỏ hàng</button>
+                </div>
+            </div>
+            <div class="payment">
+                <h3 class="text-header-cart">THÔNG TIN ĐƠN HÀNG</h3>
+                <div class="box-pay">
+                    <div class="total-money">
+                        <p class="total">Tổng tiền : @string.Format("{0:#,##0.₫}", Model.Sum(x => x.SanPham.GiaSale * x.SoLuong))</p>
+                    </div>
+                    <div class="policy-pay">
+                        <p>
+                            Phí vận chuyển sẽ được tính ở trang thanh toán.
+                            <br>
+                            Bạn cũng có thể nhập mã giảm giá ở trang thanh toán.
+                        </p>
+                    </div>
+                    <a href="PaymentInterface">
+                        <button class="act-pay">
+                            <b>THANH TOÁN</b>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="frame">
+            <h2 class="text-empty-cart">Giỏ hàng của bạn đang trống</h2>
+            <button class="custom-btn btn-2">
+                <a href="Index">
+                    Tiếp tục mua hàng
+                </a>
+            </button>
+        </div>
+    }
+</div>
+
+
+
+
+<script src="/Assets/Website/JS/Cart.js"></script>

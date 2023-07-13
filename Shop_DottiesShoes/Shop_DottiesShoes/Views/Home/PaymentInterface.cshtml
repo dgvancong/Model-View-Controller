@@ -1,0 +1,117 @@
+﻿@model Shop_DottiesShoes.Models.HoaDonBan
+
+@{
+    Layout = null;
+    List<Shop_DottiesShoes.Models.CT_HoaDonBan> cart = ViewBag.cart;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/Assets/Website/Css/EXPLORER.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/Website/Css/Payment interface.css">
+    <link rel="icon" href="/Album/BoCuc/z3398273747863_81c41ce47a59fbf2a5832130c0d3308e.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title> Dotie Shoes-Payment</title>
+</head>
+<body>
+    <div class="wrapper grid">
+        <div class="info-delivery">
+            <h2 class="header-text">Dotie Shoes</h2>
+            <p class="user-test"><a href="/Home/viewCart/"> Giỏ hàng </a> >    Thông tin giao hàng </p>
+            <p class="info-deli-text">Thông tin giao hàng</p>
+            <p class="user-test">Bạn đã có tài khoản chưa? <a href="/User/Login">Đăng nhập</a></p>
+
+
+            @using (Html.BeginForm("PaymentInterface", "Home", FormMethod.Post))
+            {
+                <div class="form-horizontal">
+                    <hr />
+                    <div class="form-group">
+                        <label>Tên Khách Hàng</label>
+                        <div class="col-md-10">
+                            <input name="recipient" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Số Điện Thoại</label>
+                        <div class="col-md-10">
+                            <input name="phone" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Địa Chỉ</label>
+                        <div class="col-md-10">
+                            <input name="DeliveryAddress" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ghi Chú</label>
+                        <div class="col-md-10">
+                            <input name="note" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tổng tiền</label>
+                        <div class="col-md-10">
+                            <input name="TT" value=" @(cart.Sum(x => x.SanPham.GiaSale * x.SoLuong))" class="form-control" />
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Thanh Toán" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="info-product">
+            <table class="buyed-product">
+                <tbody id="listCart">
+                    @foreach (var item in cart)
+                    {
+                        <tr>
+                            <td class="img-product"><img src="@item.SanPham.HinhAnh"></td>
+                            <td class="name-product">
+                                Tên Sản Phẩm : @item.SanPham.TenSP <br />
+                                Màu Sắc : @item.SanPham.MauSac <br />
+                                Kích Thước : @item.SanPham.KichThuoc <br />
+                                Đơn Giá : @string.Format("{0:#,##0.đ}", item.SanPham.GiaSale) <br />
+                                Số Lượng : @item.SoLuong
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            <div class="code-sale">
+                <input type="text" class="input-code" placeholder="Mã giảm giá">
+                <button class="use-code">Sử dụng</button>
+            </div>
+            <div class="box-price">
+                <p>Tạm tính</p>
+                <p class="price-before spTong"> @String.Format("{0:#,##0.₫}", cart.Sum(x => x.SanPham.GiaSale * x.SoLuong))
+                </p>
+            </div>
+            <div class="pay-trans">
+                <p>Phí vận chuyển</p>
+                <p class="price-trans">—</p>
+            </div>
+            <div class="total-price">
+                <p>Tổng cộng</p>
+                <p class="price-after spTong"> @string.Format("{0:#,##0.₫}", cart.Sum(x => x.SanPham.GiaSale * x.SoLuong))</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

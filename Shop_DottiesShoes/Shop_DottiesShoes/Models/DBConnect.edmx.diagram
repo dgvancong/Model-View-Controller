@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7edf5812d90a4a5480b39a027a7e74db" Name="Diagram1">
+        <EntityTypeShape EntityType="ShopDottiesShoesModel.ADmin" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopDottiesShoesModel.CT_HoaDonBan" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopDottiesShoesModel.CT_HoaDonNhap" Width="1.5" PointX="8.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopDottiesShoesModel.HoaDonBan" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopDottiesShoesModel.HoaDonNhap" Width="1.5" PointX="6" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopDottiesShoesModel.KhachHang" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopDottiesShoesModel.LoaiSanPham" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopDottiesShoesModel.NhaCungCap" Width="1.5" PointX="3.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopDottiesShoesModel.SanPham" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopDottiesShoesModel.sysdiagram" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopDottiesShoesModel.TinTuc" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="ShopDottiesShoesModel.FK__CT_HoaDon__MaHDB__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopDottiesShoesModel.FK__CT_HoaDonB__MaSP__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopDottiesShoesModel.FK__CT_HoaDon__MaHDN__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopDottiesShoesModel.FK__CT_HoaDonN__MaSP__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopDottiesShoesModel.FK__HoaDonBan__Usern__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopDottiesShoesModel.FK__HoaDonNha__MaNCC__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopDottiesShoesModel.FK__SanPham__MaLoai__4222D4EF" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

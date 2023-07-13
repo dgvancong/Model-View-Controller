@@ -1,0 +1,106 @@
+﻿@model IEnumerable<Shop_DottiesShoes.Models.SanPham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ADminDVC/Views/Shared/_Layout.cshtml";
+}
+
+<title>QL Sản Phẩm</title>
+<h3>Sản Phẩm</h3>
+
+<button class="btn btn-primary" style="margin-bottom: 12px;">
+    <i class="fa-solid fa-plus"></i>
+    @Html.ActionLink("Thêm mới", "Create", null, new { @class = "text-gray-100" })
+</button>
+<div class="container-fluid" ng-controller="mycontrol" ng-app="Giay">
+    <table class="table table-bordered table-striped" id="dataTable">
+        <thead>
+            <tr>
+                <th>
+                    Thứ Tự
+                </th>
+                <th>
+                    Hình ảnh
+                </th>
+                @*<th>
+                    Tên loại
+                </th>*@
+                <th>
+                    Tên sản phẩm
+                </th>
+                <th>
+                    Màu sắc
+                </th>
+                <th>
+                    Đơn giá
+                </th>
+                <th>
+                    Giá sale
+                <th>
+                    Kích thước
+                </th>
+                <th>
+                    Số lượng
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="data in datas">
+                <td>
+                    {{$index+1}}
+                </td>
+                <td>
+                    <img src="{{data.HinhAnh}}" style="width: 140px" />
+                </td>
+                @*<td>
+                    {{data.LoaiSanPham.TenLoai}}
+                </td>*@
+                <td>
+                    {{data.TenSP}}
+                </td>
+                <td>
+                    {{data.MauSac}}
+                </td>
+                <td>
+                    {{data.DonGia | currency:""}}
+                </td>
+                <td>
+                    {{data.GiaSale | currency:""}}
+                </td>
+                <td>
+                    {{data.KichThuoc}}
+                </td>
+                <td>
+                    {{data.SoLuong}}
+                </td>
+                <td>
+                    <a href="/ADminDVC/SanPhams/Edit?id={{data.MaSP}}"><i class="text-warning fa-solid fa-pen-to-square"></i></a>
+                    <a href="/ADminDVC/SanPhams/Details?id={{data.MaSP}}"><i class="fa-solid fa-circle-info"></i></a>
+                    <a href="/ADminDVC/SanPhams/Delete?id={{data.MaSP}}"><i class="text-danger fa-solid fa-trash"></i></a>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+@section scripts{
+    <script src="/Assets/ADmin/ADThay/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="/Assets/ADmin/ADThay/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script>
+        var myApp = angular.module("Giay", []);
+        myApp.controller("mycontrol", mycontrol);
+        function mycontrol($scope, $http) {
+            $http({
+                url: "/ADminDVC/SanPhams/GetAll",
+                method: "GET"
+            }).then(function (res) {
+                $scope.datas = res.data;
+                angular.element(document).ready(function () {
+                    $('#dataTable').DataTable();
+                });
+
+            });
+        }
+    </script>
+}

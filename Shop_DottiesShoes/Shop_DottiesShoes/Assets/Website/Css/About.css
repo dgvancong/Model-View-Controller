@@ -1,0 +1,490 @@
+.head-block .head-shop {
+    width: 1348px;
+    height: 330px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Head-Seach {
+    width: 98%;
+    height: 40px;
+    background-color: rgb(245, 248, 253);
+    margin-top:40px;
+    padding-left: 20px;
+}
+
+.Head_Seach_0 {
+    color: #000000;
+    font-size: 0.94em;
+    cursor: pointer;
+    font-weight: bolder;
+    border: 1px solid transparent;
+    margin-right: 1em;
+    line-height: 2.4em;
+    min-height: 2.5em;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+}
+
+.Content {
+    width: 100%;
+    height: 1484px;
+    background-color: rgb(245, 248, 253);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Content-right {
+    width: 850px;
+    height: auto;
+    background-color: #ffffff;
+}
+
+.Content-right-1 {
+    height: 25px;
+    padding: 25px 25px;
+}
+
+.Content-right-h3 {
+    text-transform: uppercase;
+    font-size: .97em;
+    cursor: pointer;
+    font-weight: bolder;
+    text-decoration: none;
+    border: 1px solid transparent;
+    margin-right: 1em;
+    line-height: 2.4em;
+    min-height: 2.5em;
+    padding: 0 1.2em;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+}
+
+.Content-right-2 {
+    height: 50px;
+    padding: 25px 100px;
+}
+
+.Content-right-p {
+    font-size: 0.94em;
+    cursor: pointer;
+    font-weight: bolder;
+    border: 1px solid transparent;
+    margin-right: 1em;
+    line-height: 2.4em;
+    min-height: 2.5em;
+    padding: 0 1.2em;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+}
+
+.Content-right-3 {
+    height: 850px;
+}
+
+.Content-right-p-1 {
+    max-width: 832px;
+    padding-left: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.Content-left {
+    width: 270px;
+    height: 310px;
+    background-color: #ffffff;
+}
+
+.Content-left-font h3 {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: bolder;
+    text-decoration: none;
+    border: 1px solid transparent;
+    margin-right: 1em;
+    line-height: 2.4em;
+    min-height: 2.5em;
+    padding: 0 1.2em;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+}
+
+.Content-left-font-1 {
+    padding: 15px 0px 15px 15px;
+    border-bottom: 1px dashed #e1e1e1;
+}
+
+    .Content-left-font-1 p {
+        font-size: 0.94em;
+        cursor: pointer;
+        font-weight: bolder;
+        border: 1px solid transparent;
+        margin-right: 1em;
+        line-height: 2.4em;
+        min-height: 2.5em;
+        padding: 0 1.2em;
+        max-width: 100%;
+        text-rendering: optimizeLegibility;
+        font-family: "Roboto", sans-serif;
+    }
+
+
+
+.Content-left-img {
+    width: 270px;
+    height: 155px;
+    padding-top: 35px;
+}
+
+.Homeinterface-Header {
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Homeinterface-Header-Seach {
+    width: 410px;
+    height: 50px;
+    padding-top: 4.5px;
+}
+
+::placeholder {
+    color: #333333;
+    font-size: 16px;
+}
+
+.fa-magnifying-glass {
+    color: #333333;
+    width: 35px;
+    font-size: 18px;
+}
+
+.Banner_Seach_Text {
+    height: 45px;
+    width: 87%;
+    background-color: none;
+    display: flex;
+    padding-left: 85px;
+}
+
+    .Banner_Seach_Text input {
+        height: 45px;
+        width: 500%;
+        border: none;
+        padding-left: 25px;
+        flex: 1;
+        background-color: #f1f1f1;
+    }
+
+.Banner_Seach_Icon {
+    float: right;
+    width: 28%;
+    height: 45px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.Head-Footer-Email {
+    padding-top: 13px;
+    padding-left: 15px;
+    padding-right: 45px;
+    padding-top: 1.5rem;
+}
+
+.Homeinterface-Header-Menu-li-a2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #000000;
+    transition: 0.3s;
+}
+.accordion {
+    height: auto;
+    padding: 25px 25px;
+}
+.img {
+    width: 100%;
+    margin-top: -25px;
+}
+.affix {
+    height: auto;
+    padding: 10px 25px;
+}
+    .affix p {
+        text-transform: uppercase;
+        font-size: 1.1em;
+        cursor: pointer;
+        font-weight: bolder;
+        text-decoration: none;
+        border: 1px solid transparent;
+        margin-right: 1em;
+        line-height: 2.4em;
+        min-height: 2.5em;
+        padding: 0 1.2em;
+        max-width: 100%;
+        text-rendering: optimizeLegibility;
+        font-family: "Roboto", sans-serif;
+    }
+p.active-font-p {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: bolder;
+    text-decoration: none;
+    border: 1px solid transparent;
+    margin-right: 1em;
+    line-height: 2.4em;
+    min-height: 2.5em;
+    padding: 0 1.2em;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+}
+p.active-font-pp {
+    font-size: 0.94em;
+    cursor: pointer;
+    font-weight: bolder;
+    border: 1px solid transparent;
+    margin-right: 1em;
+    line-height: 2.4em;
+    min-height: 2.5em;
+    padding: 0 1.2em;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+}
+.active-font-ppp {
+    font-size: 0.84em;
+    cursor: pointer;
+    font-weight: bolder;
+    border: 1px solid transparent;
+    margin-right: 1em;
+    line-height: 2.4em;
+    min-height: 2.5em;
+    padding: 0 1.2em;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+}
+.card-body {
+    width: 100%;
+    display: flex;
+    height: auto;
+    padding: 25px 25px;
+}
+.img-hide {
+    width: 30%;
+}
+
+.frame {
+    width: 90%;
+    margin: 120px auto;
+    text-align: center;
+    height: 120px;
+}
+
+h2.text-empty-cart {
+    text-transform: uppercase;
+    font-size: 1.87em;
+    cursor: pointer;
+    font-weight: bolder;
+    text-decoration: none;
+    border: 1px solid transparent;
+    margin-right: 1em;
+    line-height: 2.4em;
+    min-height: 2.5em;
+    padding: 0 1.2em;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+}
+.btn-2 {
+    background: white;
+    border: none;
+}
+
+    .btn-2:before {
+        height: 0%;
+        width: 2px;
+    }
+
+    .btn-2:hover {
+        box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5), -4px -4px 6px 0 rgba(116, 125, 136, .5), inset -4px -4px 6px 0 rgba(255,255,255,.2), inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+    }
+
+button {
+    margin: 20px 40px 0px 0px;
+}
+
+    button a {
+        font-size: 0.97em;
+        cursor: pointer;
+        font-weight: bolder;
+        text-decoration: none;
+        border: 1px solid transparent;
+        margin-right: 1em;
+        line-height: 2.4em;
+        min-height: 2.5em;
+        padding: 0 1.2em;
+        max-width: 100%;
+        text-rendering: optimizeLegibility;
+        font-family: "Roboto", sans-serif;
+        color: black;
+        margin: 6px;
+    }
+
+.custom-btn {
+    width: 173px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+
+h4 {
+    text-transform: uppercase;
+
+    font-size: 1.97em;
+    cursor: pointer;
+    font-weight: bolder;
+    text-decoration: none;
+    border: 1px solid transparent;
+    margin-right: 1em;
+    line-height: 2.4em;
+    min-height: 2.5em;
+    padding: 0 1.2em;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+input#UserName {
+    width: 25%;
+    height: 55px;
+    border: 1px solid transparent;
+    background: #ededed;
+    color: #000000;
+    padding: 0 25px;
+}
+input#PassWord {
+    width: 25%;
+    height: 55px;
+    border: 1px solid transparent;
+    background: #ededed;
+    color: #000000;
+    padding: 0 25px;
+}
+input.btn.btn-default {
+    width: 29%;
+    height: 55px;
+    border: 1px solid transparent;
+    background: #ededed;
+    color: #000000;
+    padding: 0 25px;
+    font-size: 16px;
+}
+
+.form-horizontal {
+    height:825px;
+}
+.form-group {
+    text-align: center;
+    margin: 20px 0px 30px 160px;
+}
+label.control-label.col-md-2 {
+    text-transform: uppercase;
+    font-size: 0.97em;
+    cursor: pointer;
+    font-weight: bolder;
+    text-decoration: none;
+    border: 1px solid transparent;
+    margin-right: 49em;
+    line-height: 2.4em;
+    min-height: 2.5em;
+    padding: 0 1.2em;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+    position:absolute;
+    margin-left: -457px;
+}
+span.field-validation-error.text-danger {
+    font-size: 0.97em;
+    cursor: pointer;
+    font-weight: bolder;
+    text-decoration: none;
+    border: 1px solid transparent;
+    margin-right: 1em;
+    line-height: 2.4em;
+    min-height: 2.5em;
+    padding: 0 1.2em;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+}
+
+input#Cname {
+    width: 25%;
+    height: 55px;
+    border: 1px solid transparent;
+    background: #ededed;
+    color: #000000;
+    padding: 0 25px;
+}
+input#Email {
+    width: 25%;
+    height: 55px;
+    border: 1px solid transparent;
+    background: #ededed;
+    color: #000000;
+    padding: 0 25px;
+}
+input#Password {
+    width: 25%;
+    height: 55px;
+    border: 1px solid transparent;
+    background: #ededed;
+    color: #000000;
+    padding: 0 25px;
+}
+input#Phone {
+    width: 25%;
+    height: 55px;
+    border: 1px solid transparent;
+    background: #ededed;
+    color: #000000;
+    padding: 0 25px;
+}
+input#Address {
+    width: 25%;
+    height: 55px;
+    border: 1px solid transparent;
+    background: #ededed;
+    color: #000000;
+    padding: 0 25px;
+}
+input#PostCode {
+    width: 25%;
+    height: 55px;
+    border: 1px solid transparent;
+    background: #ededed;
+    color: #000000;
+    padding: 0 25px;
+}

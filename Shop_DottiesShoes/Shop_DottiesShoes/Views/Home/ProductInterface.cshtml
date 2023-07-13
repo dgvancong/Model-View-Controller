@@ -1,0 +1,255 @@
+﻿@model Shop_DottiesShoes.Models.SanPham
+@{
+    ViewBag.Title = "ProductInterface";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title> Dotie Shoes-Product</title>
+<head>
+    <link rel="stylesheet" href="/Assets/Website/Css/Product interface.css">
+    <link rel="stylesheet" href="/Assets/Website/Css/EXPLORER.css?v=3.4.1">
+</head>
+<div class="Head-Seach">
+    <p> <a class="Head_Seach_0" href="Index"> Home </a> / <a class="Head_Seach_0" href=""> Sản Phẩm Nổi Bật</a> <a class="Head_Seach_0" href=""> / </a> <a class="Head_Seach_0" href="">@Model.TenSP</a></p>
+</div>
+<div class="Content">
+    <div class="Content-left">
+        @*<div class="laptop-list-img">
+                <div><img class="img-item" onclick="ShowGiay2(this)" src="/FileUpLoad/@Model.HinhAnh"></div>
+                <div><img class="img-item" onclick="ShowGiay2(this)" src="/FileUpLoad/@Model.HinhAnh"></div>
+                <div><img class="img-item" onclick="ShowGiay2(this)" src="/FileUpLoad/@Model.HinhAnh"></div>
+                <div><img class="img-item" onclick="ShowGiay2(this)" src="/FileUpLoad/@Model.HinhAnh"></div>
+                <div><img class="img-item" onclick="ShowGiay2(this)" src="/FileUpLoad/@Model.HinhAnh"></div>
+            </div>*@
+    </div>
+    <div class="Main-Content">
+        <img id="Main-Content-Adidas" src="@Model.HinhAnh" style="width: 415px; height: 494px">
+        <div class="head_icon_1">
+            <a href="@Model.HinhAnh">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </a>
+        </div>
+    </div>
+    <div class="Content-right">
+        <div class="Content-Top">
+            <h3 class="Content_Top_O">@Model.TenSP / @Model.MauSac  </h3>
+            <p class="Content_Top_Code_T"> Tình trạng: Còn hàng </p>
+            <p class="Content_Top_Code_T"> @Model.LoaiSanPham.TenLoai </p>
+        </div>
+        <div class="Content-Center">
+            <p class="price"> Đơn Giá : @string.Format("{0:#,##0.đ}", Model.GiaSale)</p>
+        </div>
+        <div class="Content-Size">
+            <div class="Content_Center_Size_O"><input type="button" value="4UK" class="fist"></div>
+            <div class="Content_Center_Size_O"><input type="button" value="4.5UK"></div>
+            <div class="Content_Center_Size_O"><input type="button" value="5UK"></div>
+            <div class="Content_Center_Size_O"><input type="button" value="5.5UK"></div>
+            <div class="Content_Center_Size_O"><input type="button" value="6UK"></div>
+            <div class="Content_Center_Size_O"><input type="button" value="6.5UK"></div>
+
+        </div>
+        <div class="Content-Button">
+            <div class="Content_Float">
+                <input type="button" onclick="Tang()" value="-" class="Content_Float_add">
+                <input type="text" value="1" min="1" class="Content_Float_minus">
+                <input type="button" value="+" class="Content_Float_add">
+            </div>
+            <a href="/Home/AddCart?id=@Model.MaSP">
+                <button class="act-pay">
+                    THÊM VÀO GIỎ HÀNG
+                </button>
+            </a>
+        </div>
+        <div class="Content-Current">
+            <div class="Content_Current_0">
+                <p>Thông Tin Sản Phẩm :</p>
+                <ul class="Content_Current_1">
+                    <li>
+                        CÓ SỬ DỤNG CHẤT LIỆU TÁI CHẾ
+                        Làm từ một nhóm chất liệu tái chế, thân giày có chứa ít nhất 50% thành phần tái chế. Sản phẩm này đại diện cho một trong số rất nhiều các giải pháp của chúng tôi hướng tới chấm dứt rác thải nhựa.
+                    </li>
+                    <li>
+                        NGUỒN NĂNG LƯỢNG BẤT TẬN
+                        Lớp đệm adidas BOOST cho khả năng hoàn trả năng lượng tuyệt vời và cảm giác thoải mái tức thì trên từng sải chân giúp bạn vững bước.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="product-content-right-bottom">
+            <div class="product-content-right-bottom-top">
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="product-content-right-bottom-content-big">
+                <div class="product-content-right-bottom-content-title row">
+                    <div class="product-content-right-bottom-content-item chitiet">
+                        <p>View Product Details</p>
+                    </div>
+                    <div class="product-content-right-bottom-content-item baoquan">
+                        <p>Free Delivery and Returns</p>
+                    </div>
+                    <div class="product-content-right-bottom-content-item dacdiem">
+                        <p>Reviews (0)</p>
+                    </div>
+                </div>
+                <div class="product-content-right-bottom-content">
+                    <div class="product-content-right-bottom-content-chitiet">
+                        Thiết kế ban đầu dành cho sân bóng rổ vào thập niên 70.<br />
+                        Được các ngôi sao hip hop tôn sùng vào thập niên 80. Đôi giày adidas Superstar giờ đây đã trở thành biểu tượng của các tín đồ thời trang đường phố.<br />
+                        Thiết kế mũi giày vỏ sò nổi tiếng thế giới mang đến phong cách chất lừ và khả năng bảo vệ.<br />
+                        Giống như những gì đôi giày này đã thể hiện trên sân bóng rổ trong quá khứ.<br />
+                        Giờ đây, bạn có thể tự tin tham gia lễ hội âm nhạc hay dạo phố mà không sợ bị dẫm lên chân.<br />
+                        Chi tiết 3 Sọc viền răng cưa và logo adidas Superstar đóng khung mang đậm phong cách nguyên bản chính hiệu.
+                    </div>
+
+                    <div class="product-content-right-bottom-content-baoquan">
+                        <br /><br />
+                        Hạn chế ngâm giày trong nước thời gian dài.
+                        <br /><br />
+                        Vệ sinh giày bằng khăn ẩm
+                        <br /><br />
+                        Tránh phơi trực tiếp dưới ánh nắng gay gắt.
+                        <br /><br />
+                        Không sử dụng chất tẩy mạnh trực tiếp lên sản phẩm.
+                        <br /><br />
+                        Không chà sát mạnh lên bề mặt sản phẩm.
+                        <br /><br />
+                        Công nghệ Air tiên tiến với cấu trúc túi khí bên trong giúp giảm thiểu chấn thương trong quá trình luyện tập thể dục thể thao dành cho người dùng.
+                    </div>
+                    <div class="product-content-right-bottom-content-dacdiem">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="Content-center">
+    <div class="head-block">
+        <div class="head-font">
+            <p>SẢN PHẨM LIÊN QUAN</p>
+        </div>
+        <section>
+            <div class="head-shop">
+                <div class="head-product">
+                    <div class="head-box-jpg">
+                        <img src="/Album/BoCuc/de1.jpg" style="width: 215px; height: 235px ">
+                        <img class="img-hide" src="/Album/BoCuc/de2.jpg" style="width: 215px; height: 235px ">
+                    </div>
+                    <div class="head-box-font">
+                        <div class="head-box-name">
+                            <a href="/Home/ProductInterface1">
+                                <h5 class="box-name">Adidas Supernova Screaming Pink</h5>
+                            </a>
+                        </div>
+                        <div class="head-box-price">
+                            <p class="box-price">
+                                <span>1.650.00đ</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="head-product">
+                    <div class="head-box-jpg">
+                        <img src="/Album/SanPham/run3.JPG" style="width: 215px; height: 235px ">
+                        <img class="img-hide" src="/Album/SanPham/run4.JPG" style="width: 215px; height: 235px ">
+                    </div>
+                    <div class="head-box-font">
+                        <div class="head-box-name">
+
+                            <h5 class="box-name">Adidas UltraBoost 19w Triple Black </h5>
+                        </div>
+                        <div class="head-box-price">
+                            <p class="box-price">
+                                <span>1.650.000đ</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="head-product">
+                    <div class="head-box-jpg">
+                        <img src="/Album/SanPham/run5.JPG" style="width: 215px; height: 235px ">
+                        <img class="img-hide" src="/Album/SanPham/run6.JPG" style="width: 215px; height: 235px ">
+                    </div>
+                    <div class="head-box-font">
+                        <div class="head-box-name">
+                            <h5 class="box-name">NMD R1 V2 While Galaxy</h5>
+                        </div>
+                        <div class="head-box-price">
+                            <p class="box-price">
+                                <span>1.950.000đ</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="head-product">
+                    <div class="head-box-jpg">
+                        <img src="/Album/SanPham/v1.JPG" style="width: 215px; height: 235px ">
+                        <img class="img-hide" src="/Album/SanPham/v2.JPG"style="width: 215px; height: 235px ">
+                    </div>
+                    <div class="head-box-font">
+                        <div class="head-box-name">
+                            <h5 class="box-name">NMD R1 Spectoo Silver Boost</h5>
+                        </div>
+                        <div class="head-box-price">
+                            <p class="box-price">
+                                <span>2.050.000đ</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="head-product">
+                    <div class="head-box-jpg">
+                        <img src="/Album/SanPham/v3.JPG" style="width: 215px; height: 235px ">
+                        <img class="img-hide" src="/Album/SanPham/v4.JPG"style="width: 215px; height: 235px ">
+                    </div>
+                    <div class="head-box-font">
+                        <div class="head-box-name">
+                            <h5 class="box-name">Adidas Court Torino Linght Blue</h5>
+                        </div>
+                        <div class="head-box-price">
+                            <p class="box-price">
+                                <span>1.250.000đ</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="/Assets/Website/JS/Product.js"></script>
+<script>
+    function addCart() {
+        var soluong = document.querySelector('.Content_Float_minus').value;
+        var product = {
+            id: '01',
+            image: "/Album/BoCuc/de1.jpg",
+            name: 'Nike Air Force 1 LXX x Serena Williams',
+            size: '4UK',
+            quantity: Number(soluong),
+            price: 5650000
+        }
+        var listProduct;
+        if (localStorage.getItem('cart') == null) {
+            listProduct = [product];
+        } else {
+            listProduct = JSON.parse(localStorage.getItem('cart'))
+            let ok = true;
+            for (let x of listProduct) {
+                if (x.id == product.id) {
+                    x.quantity += 1;
+                    ok = false;
+                    break;
+                }
+            }
+            if (ok) {
+                listProduct.push(product);
+            }
+        }
+        localStorage.setItem('cart', JSON.stringify(listProduct));
+        alert("Đã thêm giỏ hàng thành công!");
+    }
+</script>
+
+<script src="/Assets/Website/JS/Cart.js"></script>

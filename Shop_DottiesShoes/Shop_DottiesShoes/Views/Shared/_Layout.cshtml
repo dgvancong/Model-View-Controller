@@ -1,0 +1,560 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/Website/Css/Home interface.css?v=3.4.1">
+    <link rel="stylesheet" href="/Assets/Website/Css/EXPLORER.css?v=3.4.1">
+    <link rel="icon" href="/Album/BoCuc/z3398273747863_81c41ce47a59fbf2a5832130c0d3308e.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <div class="Homeinterface-Top">
+        <div class="Homeinterface-Banner">
+            <div class="Homeinterface-Banner-Logo">
+                <p class="Homeinterface-Banner-Logo-P">
+                    <a href="/Home/Index">
+                        <img src="/Album/BoCuc/Dotie.png">
+                    </a>
+                </p>
+            </div>
+            <div class="Homeinterface-Banner-services">
+                <div class="Homeinterface-Banner-services-item">
+                    <div class="Homeinterface-Banner-services-item-img">
+                        <img src="/Album/BoCuc/baseline_call_black_24dp.png">
+                    </div>
+                    <div class="Homeinterface-Banner-services-item-content">
+                        <p>Hotline mua hàng</p>
+                        <span>Gọi ngay: 0334624356</span>
+                    </div>
+                </div>
+                <div class="Homeinterface-Banner-services-item">
+                    <div class="Homeinterface-Banner-services-item-img" height="25px">
+                        <img src="/Album/BoCuc/baseline_local_shipping_black_24dp.png">
+                    </div>
+                    <div class="Homeinterface-Banner-services-item-content">
+                        <p>Giao hàng tận nơi</p>
+                        <span>Miễn phí từ 5 sản phẩm</span>
+                    </div>
+                </div>
+                <div class="Homeinterface-Banner-services-item">
+                    <div class="Homeinterface-Banner-services-item-img">
+                        <img src="/Album/BoCuc/baseline_autorenew_black_24dp.png">
+                    </div>
+                    <div class="Homeinterface-Banner-services-item-content">
+                        <p>1 Đổi 1 nếu lỗi hàng</p>
+                        <span>Trong vòng 7 ngày</span>
+                    </div>
+                </div>
+            </div>
+            <div class="Homeinterface-Banner-Icon">
+                <div class="Homeinterface-Banner-Icon-User">
+                    <nav id="primary_nav_wrap">
+                        @{
+                            var session = (Shop_DottiesShoes.Common.UserLogin)Session[Shop_DottiesShoes.Common.CommonConstants.USER_SESSION];
+                        }
+                        @if (session == null)
+                        {
+                            <ul>
+                                <li>
+                                    <a href="#" title="Tài khoản">
+                                        <img src="/Album/BoCuc/baseline_account_circle_black_24dp.png" class="colok">
+                                    </a>
+                                    <ul>
+                                        <li><a href="/User/Login">Đăng Nhập</a></li>
+                                        <li><a href="/User/Register">Đăng Kí</a></li>
+                                        <li><a href="/User/Register">Đăng Xuất</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        }
+                        else
+                        {
+                            <ul>
+                                <li id=" vancong">Xin chào: @session.UserName</li>
+                                <li>@Html.ActionLink("Thoát", "LogOut", "User")</li>
+                            </ul>
+                        }
+                    </nav>
+                </div>
+                <div class="Homeinterface-Banner-Icon-Cart">
+                    <a href="/Home/viewCart" title="Giỏ hàng"><img src="/Album/BoCuc/baseline_shopping_bag_black_24dp.png"></a>
+                </div>
+                <div class="Homeinterface-Banner-Icon-Bell">
+                    <a href="/ADminDVC/Login" title="Thông báo"><img src="/Album/BoCuc/baseline_notifications_black_24dp.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Homeinterface-Header">
+        <div class="Homeinterface-Header-Menu" id="navbar">
+            <ul class="Homeinterface-Header-Menu-Ul">
+                <li class="Homeinterface-Header-Menu-li">
+                    <nav id="primary_nav_wrap1">
+                        <ul>
+                            <li>
+                                <a href="/Home/Index" class="Homeinterface-Header-Menu-li-a">New</a>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <picture>
+                                                <img src="~/UploadedFiles/files/14443_Comp_NBC_Image1.jpg" class="newshop" />
+                                            </picture>
+                                            <p>
+                                                <a href="NikeInterface">Shop Men</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <picture>
+                                                <img src="~/UploadedFiles/files/14443_Comp_NBC_Image2.jpg" class="newshop" />
+                                            </picture>
+                                            <p>
+                                                <a href="NikeInterface">Shop Women</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <picture>
+                                                <img src="~/UploadedFiles/files/13495_Comp_NBC_Image3.jpg" class="newshop" />
+                                            </picture>
+                                            <p>
+                                                <a href="/Home/About">Launch Calendar</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+
+                <li class="Homeinterface-Header-Menu-li">
+                    <nav id="primary_nav_wrap2">
+                        <ul>
+                            <li>
+                                <a href="" class="Homeinterface-Header-Menu-li-a">Men</a>
+                                <ul class="about-image-wrap">
+                                    <li class="about-text-wrap">
+                                        <a href="NikeInterface">
+                                            SHOES
+
+                                        </a>
+                                        <span>
+                                            <div class="about-image-wrap">
+                                                <ul class="about-text-wrap">
+                                                    <li class="active-font-p">All Shoes</li>
+                                                    <li class="active-font-p">Running</li>
+                                                    <li class="active-font-p">Lifestyle</li>
+                                                    <li class="active-font-p">Training</li>
+                                                    <li class="active-font-p">Walking</li>
+                                                    <li class="active-font-p">Soccer</li>
+                                                    <li class="active-font-p">Golf</li>
+                                                    <li class="active-font-p">Basketball</li>
+                                                    <li class="active-font-p">Tennis</li>
+                                                    <li class="active-font-p">Hiking & Trail </li>
+                                                </ul>
+                                            </div>
+                                        </span>
+
+                                    </li>
+                                    <li>
+                                        <a href="/User/Register">CLOTING</a>
+                                        <div class="about-image-wrap">
+                                            <ul class="about-text-wrap">
+                                                <li class="active-font-p">All Clothing</li>
+                                                <li class="active-font-p">Hoodies & Sweatshirts </li>
+                                                <li class="active-font-p">Shirts</li>
+                                                <li class="active-font-p">Jackets & Vests </li>
+                                                <li class="active-font-p">Sport Bars</li>
+                                                <li class="active-font-p">Shorts</li>
+                                                <li class="active-font-p">Pants & Leggings</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/User/Register">SPORTS</a>
+                                        <div class="about-image-wrap">
+                                            <ul class="about-text-wrap">
+                                                <li class="active-font-p">Running</li>
+                                                <li class="active-font-p">Training</li>
+                                                <li class="active-font-p">Walking</li>
+                                                <li class="active-font-p">Soccer</li>
+                                                <li class="active-font-p">Golf</li>
+                                                <li class="active-font-p">Basketball</li>
+                                                <li class="active-font-p">Tennis</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/User/Register">ACCESSORIES</a>
+                                        <div class="about-image-wrap">
+                                            <ul class="about-text-wrap">
+                                                <li class="active-font-p">All Accessories</li>
+                                                <li class="active-font-p">Socks</li>
+                                                <li class="active-font-p">Insoles</li>
+                                                <li class="active-font-p">Hats</li>
+                                                <li class="active-font-p">Bags</li>
+                                                <li class="active-font-p">Underwear</li>
+                                                <li class="active-font-p">Fitness Gear</li>
+                                                <li class="active-font-p">Compression & Braces</li>
+                                                <li class="active-font-p">Headbands & Wristbands</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/User/Register">SHOP COLLECTION</a>
+                                        <div class="about-image-wrap">
+                                            <ul class="about-text-wrap">
+                                                <li class="active-font-p">Outdoor</li>
+                                                <li class="active-font-p">TCS NYC Marathon</li>
+                                                <li class="active-font-p">New Yok Road Runners</li>
+                                                <li class="active-font-p">Fresh Foam</li>
+                                                <li class="active-font-p">FuelCell</li>
+                                                <li class="active-font-p">Black Shop</li>
+                                                <li class="active-font-p">Grey Shop</li>
+                                                <li class="active-font-p">Cold Weather Essentials</li>
+                                                <li class="active-font-p">Matching Family Style</li>
+                                                <li class="active-font-p">Wide Shoes </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+
+                <li class="Homeinterface-Header-Menu-li">
+                    <nav id="primary_nav_wrap3">
+                        <ul>
+                            <li>
+                                <a href="" class="Homeinterface-Header-Menu-li-a">Women</a>
+                                <ul class="about-image-wrap">
+                                    <li class="about-text-wrap">
+                                        <a href="NikeInterface">
+                                            SHOES
+
+                                        </a>
+                                        <span>
+                                            <div class="about-image-wrap">
+                                                <ul class="about-text-wrap">
+                                                    <li class="active-font-p">All Shoes</li>
+                                                    <li class="active-font-p">Running</li>
+                                                    <li class="active-font-p">Lifestyle</li>
+                                                    <li class="active-font-p">Training</li>
+                                                    <li class="active-font-p">Walking</li>
+                                                    <li class="active-font-p">Soccer</li>
+                                                    <li class="active-font-p">Golf</li>
+                                                    <li class="active-font-p">Basketball</li>
+                                                    <li class="active-font-p">Tennis</li>
+                                                    <li class="active-font-p">Hiking & Trail </li>
+                                                </ul>
+                                            </div>
+                                        </span>
+
+                                    </li>
+                                    <li>
+                                        <a href="/User/Register">CLOTING</a>
+                                        <div class="about-image-wrap">
+                                            <ul class="about-text-wrap">
+                                                <li class="active-font-p">All Clothing</li>
+                                                <li class="active-font-p">Hoodies & Sweatshirts </li>
+                                                <li class="active-font-p">Shirts</li>
+                                                <li class="active-font-p">Jackets & Vests </li>
+                                                <li class="active-font-p">Sport Bars</li>
+                                                <li class="active-font-p">Shorts</li>
+                                                <li class="active-font-p">Pants & Leggings</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/User/Register">SPORTS</a>
+                                        <div class="about-image-wrap">
+                                            <ul class="about-text-wrap">
+                                                <li class="active-font-p">Running</li>
+                                                <li class="active-font-p">Training</li>
+                                                <li class="active-font-p">Walking</li>
+                                                <li class="active-font-p">Soccer</li>
+                                                <li class="active-font-p">Golf</li>
+                                                <li class="active-font-p">Basketball</li>
+                                                <li class="active-font-p">Tennis</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/User/Register">ACCESSORIES</a>
+                                        <div class="about-image-wrap">
+                                            <ul class="about-text-wrap">
+                                                <li class="active-font-p">All Accessories</li>
+                                                <li class="active-font-p">Socks</li>
+                                                <li class="active-font-p">Insoles</li>
+                                                <li class="active-font-p">Hats</li>
+                                                <li class="active-font-p">Bags</li>
+                                                <li class="active-font-p">Underwear</li>
+                                                <li class="active-font-p">Fitness Gear</li>
+                                                <li class="active-font-p">Compression & Braces</li>
+                                                <li class="active-font-p">Headbands & Wristbands</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/User/Register">SHOP COLLECTION</a>
+                                        <div class="about-image-wrap">
+                                            <ul class="about-text-wrap">
+                                                <li class="active-font-p">Outdoor</li>
+                                                <li class="active-font-p">TCS NYC Marathon</li>
+                                                <li class="active-font-p">New Yok Road Runners</li>
+                                                <li class="active-font-p">Fresh Foam</li>
+                                                <li class="active-font-p">FuelCell</li>
+                                                <li class="active-font-p">Black Shop</li>
+                                                <li class="active-font-p">Grey Shop</li>
+                                                <li class="active-font-p">Cold Weather Essentials</li>
+                                                <li class="active-font-p">Matching Family Style</li>
+                                                <li class="active-font-p">Wide Shoes </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+
+                <li class="Homeinterface-Header-Menu-li">
+                    <nav id="primary_nav_wrap4">
+                        <ul>
+                            <li>
+                                <a href="" class="Homeinterface-Header-Menu-li-a">Kids</a>
+                                <ul class="about-image-wrap">
+                                    <li class="about-text-wrap">
+                                        <a href="NikeInterface">
+                                            SHOES
+                                        </a>
+                                        <span>
+                                            <div class="about-image-wrap">
+                                                <ul class="about-text-wrap">
+                                                    <li class="active-font-p">All Shoes</li>
+                                                    <li class="active-font-p">Big Kids (Size 3.5 - 7)</li>
+                                                    <li class="active-font-p">Littel Kids (Size 10.5 - 3)</li>
+                                                    <li class="active-font-p">Crib & Toddlers (Size 0 - 10)</li>
+                                                    <li class="active-font-p">Cleats</li>
+                                                </ul>
+                                            </div>
+                                        </span>
+
+                                    </li>
+                                    <li>
+                                        <a href="/User/Register">CLOTING</a>
+                                        <div class="about-image-wrap">
+                                            <ul class="about-text-wrap">
+                                                <li class="active-font-p">All Clothing</li>
+                                                <li class="active-font-p">Tops </li>
+                                                <li class="active-font-p">Bottoms</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/User/Register">SPORTS</a>
+                                        <div class="about-image-wrap">
+                                            <ul class="about-text-wrap">
+                                                <li class="active-font-p">Running</li>
+                                                <li class="active-font-p">Soccer</li>
+                                                <li class="active-font-p">Golf</li>
+                                                <li class="active-font-p">Basketball</li>
+                                                <li class="active-font-p">Tennis</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/User/Register">ACCESSORIES</a>
+                                        <div class="about-image-wrap">
+                                            <ul class="about-text-wrap">
+                                                <li class="active-font-p">All Accessories</li>
+                                                <li class="active-font-p">Socks</li>
+                                                <li class="active-font-p">Hats</li>
+                                                <li class="active-font-p">Bags</li>
+                                                <li class="active-font-p">Underwear</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/User/Register">SHOP COLLECTION</a>
+                                        <div class="about-image-wrap">
+                                            <ul class="about-text-wrap">
+                                                <li class="active-font-p">School Uniform Shoes</li>
+                                                <li class="active-font-p">Alternative Closure</li>
+                                                <li class="active-font-p">Matching Family Style</li>
+                                                <li class="active-font-p">Wide Shoes </li>
+                                                <li class="active-font-p">Accessories under $30</li>
+                                                <li class="active-font-p">Clothing under $50</li>
+                                                <li class="active-font-p">Shoes under $75</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+
+                <li class="Homeinterface-Header-Menu-li">
+                    <nav id="primary_nav_wrap1">
+                        <ul>
+                            <li>
+                                <a href="" class="Homeinterface-Header-Menu-li-a">GiftCode</a>
+                                <ul>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+
+                <li class="Homeinterface-Header-Menu-li">
+                    <nav id="primary_nav_wrap5">
+                        <ul>
+                            <li>
+                                <a href="" class="Homeinterface-Header-Menu-li-a">Sales</a>
+                                <ul class="about-image-wrap">
+                                    <li class="about-text-wrap">
+                                        <a href="/User/Login">
+                                            MEN
+                                        </a>
+                                        <span>
+                                            <div class="about-image-wrap">
+                                                <ul class="about-text-wrap">
+                                                    <li class="active-font-p">Shoes</li>
+                                                    <li class="active-font-p">Clothing</li>
+                                                    <li class="active-font-p">Accessories</li>
+                                                </ul>
+                                            </div>
+                                        </span>
+
+                                    </li>
+                                    <li>
+                                        <a href="/User/Register">Women</a>
+                                        <div class="about-image-wrap">
+                                            <ul class="about-text-wrap">
+                                                <li class="active-font-p">Shoes</li>
+                                                <li class="active-font-p">Clothing</li>
+                                                <li class="active-font-p">Accessories</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/User/Register">KIDS</a>
+                                        <div class="about-image-wrap">
+                                            <ul class="about-text-wrap">
+                                                <li class="active-font-p">Shoes</li>
+                                                <li class="active-font-p">Clothing</li>
+                                                <li class="active-font-p">Accessories</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+            </ul>
+            <div class="Homeinterface-Header-Seach" id="menu">
+                <div class="Banner_Seach_Text">
+                    <input type="search" placeholder="Tìm kiếm sản phẩm...">
+                    <a href="#" class="Banner_Seach_Icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    @RenderBody()
+    <footer id="footercontent">
+
+        <div class="container">
+            <div class="row-1">
+                <div class="email-signup justify-content-center d-flex mx-0">
+                    <p class="font-body fontweight-bold email-content-text mx-0 my-auto mr-2">
+                        Be the first to know about new arrivals
+                    </p>
+                    <button class="ok" type="submit">Sign up</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" id="company">
+                    <img src="/Album/BoCuc/z3398273747863_81c41ce47a59fbf2a5832130c0d3308e.jpg" alt="" class="logo" />
+                    <p>
+                        Trang mua sắm trực tuyến của thương hiệu Dotties Shoes, thời trang nam, nữ, phụ kiện, giúp bạn tiếp cận xu hướng thời trang mới nhất.
+                    </p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/DonggVannCongg">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/12th24.2002/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC2nBEyZayY3A8Y33IlgEDYw">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col" id="services">
+                    <h3>Liên kết</h3>
+                    <div class="links">
+                        <a href="#">Chính sách bán hàng</a>
+                        <a href="#">Chính sách bảo hành/ Đổi Trả hàng</a>
+                        <a href="#">Hình thức thanh toán</a>
+                        <a href="#">Chính sách vận chuyển</a>
+                        <a href="#">Điều khoản dịch vụ</a>
+                    </div>
+                </div>
+                <div class="col" id="useful-links">
+                    <h3>Về Chúng Tôi</h3>
+                    <div class="links">
+                        <a href="#">About</a>
+                        <a href="#">Services</a>
+                        <a href="#">Our Policy</a>
+                        <a href="#">Hệ Thống Cửa Hàng</a>
+                    </div>
+
+                </div>
+                <div class="col" id="contact">
+                    <h3>Thông tin liên hệ</h3>
+                    <div class="contact-details">
+                        <i class="fa fa-location"></i>
+                        <p>Số nhà 10, Đường Nguyễn Hải Thanh<br /> Thanh Hà, Hải Dương </p>
+                    </div>
+                    <div class="contact-details">
+                        <i class="fa fa-phone"></i>
+                        <p>0334624356</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="Footer-down">
+        <p>Copyright © 2022 Dotie Shoes. Powered by Dong Van Cong</p>
+    </div>
+
+    <script>
+        var navbar = document.getElementById("navbar")
+        var menu = document.getElementById("menu")
+        window.onscroll = function () {
+            if (window.pageYOffset >= menu.offsetTop) {
+                navbar.classList.add("sticky");
+            }
+            else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

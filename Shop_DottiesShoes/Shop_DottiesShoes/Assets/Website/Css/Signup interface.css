@@ -1,0 +1,230 @@
+.Content {
+    height: 850px;
+    margin-top: 90px;
+}
+
+.Content_right_login_dk {
+    text-align: center;
+    padding-top: 50px;
+}
+
+    .Content_right_login_dk input {
+        width: 55%;
+        height: 55px;
+        border: 1px solid transparent;
+        background: #ededed;
+        color: #000000;
+        padding: 0 25px;
+    }
+
+.Content_right_login_dk_1 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+    .Content_right_login_dk_1 input {
+        width: 55%;
+        height: 55px;
+        border: 1px solid transparent;
+        background: #ededed;
+        color: #000000;
+        padding: 0 25px;
+    }
+
+.Content_right_login_dk_2 {
+    text-align: center;
+    padding-top: 30px;
+    padding-right: 245px;
+}
+
+    .Content_right_login_dk_2 input {
+        width: 5%;
+        height: 18px;
+        border: 1px solid transparent;
+        background: #ededed;
+        color: #000000;
+        margin: 0 0 0 45px;
+    }
+
+.Content_right_login_dk_3 {
+    text-align: center;
+    padding-top: 30px;
+}
+
+    .Content_right_login_dk_3 input {
+        width: 55%;
+        height: 55px;
+        border: 1px solid transparent;
+        background: #ededed;
+        color: #000000;
+        padding: 0 25px;
+    }
+
+.Content .Content_Left {
+    width: 620px;
+    height: 850px;
+    background-color: #ffffff;
+    float: left;
+    border-right: 1px solid #ededed;
+}
+
+.Content_left_font {
+    text-align: center;
+    padding-top: 330px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.Content_left_font_hr {
+    content: "";
+    background: #000;
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 20px auto;
+}
+
+.Content .Content_right {
+    width: 705px;
+    height: 850px;
+    background-color: #ffffff;
+    float: left;
+}
+
+.Content_right_login {
+    text-align: center;
+    padding-top: 50px;
+}
+
+    .Content_right_login input {
+        width: 55%;
+        height: 55px;
+        border: 1px solid transparent;
+        background: #ededed;
+        color: #000000;
+        padding: 0 25px;
+    }
+
+.Content_right_password {
+    text-align: center;
+    padding-top: 40px;
+}
+
+    .Content_right_password input {
+        width: 55%;
+        height: 55px;
+        border: 1px solid transparent;
+        background: #ededed;
+        color: #000000;
+        padding: 0 25px;
+    }
+
+.Content_right_font {
+    height: 42px;
+    color: #000000;
+    padding-left: 138px;
+    padding-top: 18px;
+    max-width: 440px;
+    font-size: 15px;
+    color: #333333;
+}
+
+.Content_right_test {
+    text-align: center;
+    padding-top: 15px;
+}
+
+    .Content_right_test button {
+        width: 62%;
+        height: 55px;
+        border: 1px solid transparent;
+        background: #ededed;
+        color: #000000;
+        padding: 0 25px;
+        font-size: 16px;
+    }
+
+.Content_right_font_1 {
+    height: 25px;
+    color: #000000;
+    padding-top: 18px;
+    text-align: center;
+}
+
+.Content_right_test_0 {
+    text-align: center;
+    padding-top: 35px;
+    float: left;
+    padding-left: 45px;
+}
+
+.fa-arrow-left-long {
+    margin: 0px 15px;
+}
+
+.Content_right .baoloi {
+    padding: 15px 139px 0px 137px;
+    color: #df2060;
+    height: 50px;
+}
+
+.Content_right #loi {
+    width: 400px;
+    padding: 6px;
+    border: 1px solid red;
+}
+
+.Homeinterface-Header {
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Homeinterface-Header-Seach {
+    width: 410px;
+    height: 50px;
+    padding-top: 4.5px;
+}
+
+::placeholder {
+    color: #333333;
+    font-size: 16px;
+}
+
+.fa-magnifying-glass {
+    color: #333333;
+    width: 35px;
+    font-size: 18px;
+}
+
+.Banner_Seach_Text {
+    height: 45px;
+    width: 87%;
+    background-color: none;
+    display: flex;
+    padding-left: 85px;
+}
+
+    .Banner_Seach_Text input {
+        height: 45px;
+        width: 500%;
+        border: none;
+        padding-left: 25px;
+        flex: 1;
+        background-color: #f1f1f1;
+    }
+
+.Banner_Seach_Icon {
+    float: right;
+    width: 28%;
+    height: 45px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.Head-Footer-Email {
+    padding-top: 13px;
+    padding-left: 15px;
+    padding-right: 45px;
+    padding-top: 1.5rem;
+}

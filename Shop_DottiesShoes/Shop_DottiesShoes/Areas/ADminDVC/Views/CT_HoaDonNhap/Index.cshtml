@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Shop_DottiesShoes.Models.CT_HoaDonNhap>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ADminDVC/Views/Shared/_Layout.cshtml";
+    int tt = 1;
+}
+
+<title>QL CTHóa Đơn Nhập</title>
+<h3>CTHóa Đơn Nhập</h3>
+
+<p>
+    @Html.ActionLink("Thêm Mới", "Create", null, new { @class = "btn btn-primary fa fa-plus" })
+</p>
+<table class="table table-bordered table-striped" id="dataTable">
+    <thead>
+        <tr>
+            <th>
+                Thứ Tự
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonGia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TongTien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoaDonNhap.SDT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoaiSanPham.TenLoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SanPham.HinhAnh)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @(tt++)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoLuong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DonGia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TongTien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HoaDonNhap.SDT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoaiSanPham.TenLoai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SanPham.HinhAnh)
+                </td>
+                <td>
+                    @Html.ActionLink(" ", "Edit", new { id = item.MaCTHDN }, new { @Class = "btn btn-warning fa fa-pencil" })
+                    @Html.ActionLink(" ", "Details", new { id = item.MaCTHDN }, new { @Class = "btn btn-info fa fa-eye" })
+                    @Html.ActionLink(" ", "Delete", new { id = item.MaCTHDN }, new { @Class = "btn btn-danger fa fa-trash", @Onclick = "return confirm'Bạn có chắc chắn muốn xóa khách hàng này không?'" })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+@section scripts{
+    <!-- Page level plugins -->
+    <script src="/Assets/ADmin/ADThay/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="/Assets/ADmin/ADThay/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/Assets/ADmin/ADThay/js/demo/datatables-demo.js"></script>
+}

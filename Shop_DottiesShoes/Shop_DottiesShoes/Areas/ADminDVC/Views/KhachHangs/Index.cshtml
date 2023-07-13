@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Shop_DottiesShoes.Models.KhachHang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ADminDVC/Views/Shared/_Layout.cshtml";
+    int tt = 1;
+}
+
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Thêm Mới", "Create", null, new { @class = "btn btn-primary fa fa-plus" })
+</p>
+<table class="table table-bordered table-striped" id="dataTable">
+    <thead>
+        <tr>
+            <th>
+                Thứ Tự
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiaChi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoDT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatKhau)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostCode)
+            </th>
+            <th></th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @(tt++)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaChi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoDT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatKhau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostCode)
+            </td>
+            <td>
+                @Html.ActionLink(" ", "Edit", new { id = item.Username }, new { @Class = "btn btn-warning fa fa-pencil" })
+                @Html.ActionLink(" ", "Details", new { id = item.Username }, new { @Class = "btn btn-info fa fa-eye" })
+                @Html.ActionLink(" ", "Delete", new { id = item.Username }, new { @Class = "btn btn-danger fa fa-trash", @Onclick = "return confirm'Bạn có chắc chắn muốn xóa khách hàng này không?'" })
+            </td>
+        </tr>
+        }
+
+    </tbody>
+</table>
+@section scripts{
+    <!-- Page level plugins -->
+    <script src="/Assets/ADmin/ADThay/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="/Assets/ADmin/ADThay/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/Assets/ADmin/ADThay/js/demo/datatables-demo.js"></script>
+}

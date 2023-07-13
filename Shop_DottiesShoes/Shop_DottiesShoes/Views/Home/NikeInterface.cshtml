@@ -1,0 +1,137 @@
+﻿@model IEnumerable<Shop_DottiesShoes.Models.SanPham>
+@{
+    ViewBag.Title = "NikeInterface";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title> Dotie Shoes - Nike</title>
+<head>
+    <link rel="stylesheet" href="/Assets/Website/Css/Nike interface.css">
+    <link rel="stylesheet" href="/Assets/Website/Css/EXPLORER.css?v=3.4.1">
+</head>
+<div id="main" class="grid">
+    <div class="Head-Seach">
+        <p><a class="Head_Seach_0" href="">Home</a>/<a class="Head_Seach_0" href="">Nike</a></p>
+    </div>
+    <div class="Content" ng-app="myApp">
+        <div class="Content-Right">
+            <div class="Content_Right_Font_P">
+                <p> Product Type </p>
+            </div>
+            <div class="Content_Right_Font_Input">
+                <ul>
+                    <li><input name="gender" type="checkbox" value="Nam" /> Shoes</li>
+                    <li><input name="gender" type="checkbox" value="Nữ" /> Clothing</li>
+                    <li><input name="gender" type="checkbox" value="Nữ" /> Accessories</li>
+                </ul>
+            </div>
+            <div class="Content_Right_Font_H4_O">
+                <h4> Model </h4>
+            </div>
+            <div class="Content_Right_Font_Input_O">
+                <ul>
+                    <li><input name="gender" type="checkbox" value="nike" /> Nike</li>
+                    <li><input name="gender" type="checkbox" value="gucci" /> Gucci</li>
+                    <li><input name="gender" type="checkbox" value="puma" /> Puma</li>
+                    <li><input name="gender" type="checkbox" value="adidas" /> Adidas</li>
+                </ul>
+            </div>
+            <div class="Content_Right_Font_H4_T">
+                <h4> Mens Footwear Size </h4>
+            </div>
+            <div class="Content_Right_Font_Input_T">
+                <ul>
+                    <li><button class="body-bold">3.5</button></li>
+                    <li><button class="body-bold">4</button></li>
+                    <li><button class="body-bold">4.5</button></li>
+                    <li><button class="body-bold">5</button></li>
+                    <li><button class="body-bold">5.5</button></li>
+                    <li><button class="body-bold">6</button></li>
+                    <li><button class="body-bold">6.5</button></li>
+                    <li><button class="body-bold">7</button></li>
+                    <li><button class="body-bold">7.5</button></li>
+                    <li><button class="body-bold">8</button></li>
+                    <li><button class="body-bold">8.5</button></li>
+                    <li><button class="body-bold">9</button></li>
+                    <li><button class="body-bold">9.5</button></li>
+                    <li><button class="body-bold">10</button></li>
+                    <li><button class="body-bold">10.5</button></li>
+                    <li><button class="body-bold">11</button></li>
+                    <li><button class="body-bold">11.5</button></li>
+                    <li><button class="body-bold">12</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="Content_Left" ng-controller="mycontrol">
+            <div class="Content_Left_Center">
+                <div class="Content_Left_Center_Right">
+                    <h3 class="Content_Left_Center_Right_Font">  Men's New Arrivals </h3>
+                </div>
+                <div class="Content_Left_Center_Left">
+                    <select name=" SapXep" id="select-arrange-list-products" ng-model="sortColumn">
+                        <option value="">Sản phẩm nổi bật</option>
+                        <option value="GiaSale">Giá tăng dần</option>
+                        <option value="-GiaSale">Giá giảm dần</option>
+                        <option value="TenSP">Tên: A-Z</option>
+                        <option value="-TenSP">Tên: Z-A</option>
+                    </select>
+                </div>
+            </div>
+
+            
+            <div class="Homeinterface-Right-Center-Product">
+                <div class="Content_Center_Product">
+                    <div class="Content_Center_Product_Jpg">
+                        <img src="/UploadedFiles/files/14289_Comp_S1_Desktop_Single.jpg" style="width: 295px; height: 481px ">
+                        <p class="author-avatar">Holiday Gift Guide</p>
+                    </div>
+                </div>
+                <div class="Content_Center_Product" ng-repeat="data in datas | orderBy:sortColumn track by $index">
+                    <div class="Content_Center_Product_Jpg">
+                        <img src="{{data.HinhAnh}}" style="width: 295px; height: 307px ">
+                    </div>
+                    <div class="Content_Center_Product_Font">
+                        <div class="Content_Center_Product_Name">
+                            <h5 class="Content_Center_Product_Name_H6"><a href="ProductInterface?id={{data.MaSP}}">Dottie Shoes</a></h5>
+                            <span class="actives">
+                                {{data.LoaiSanPham.TenLoai}}
+                            </span>
+                            <h5 class="Content_Center_Product_Name_H5"><a href="/Home/ProductInterface/{{data.MaSP}}">{{data.TenSP}}</a></h5>
+                        </div>
+                        <div class="Content_Center_Product_Price">
+                            <p class="Content_Center_Product_Price_P">
+                                <span>{{data.GiaSale | number:""}} đ</span>
+                            </p>
+                            <p class="Content_Center_Product_Price_P">
+                                <span><del> {{data.DonGia | number:""}} đ </del></span>
+                            </p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="/Scripts/angular.js"></script>
+<script src="/Scripts/TimKiem.js"></script>
+<script>
+    var myApp = angular.module("myApp", []);
+    myApp.controller("mycontrol", mycontrol);
+    function mycontrol($scope, $http) {
+        $http({
+            url: "/Home/GetProduct",
+            method: "GET"
+        }).then(function (res) {
+            $scope.datas = res.data;
+        });
+        $scope.sortColumn = 'name';
+    }
+</script>

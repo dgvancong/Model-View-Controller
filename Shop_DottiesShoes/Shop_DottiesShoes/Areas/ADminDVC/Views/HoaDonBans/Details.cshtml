@@ -1,0 +1,83 @@
+﻿@model Shop_DottiesShoes.Models.HoaDonBan
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/ADminDVC/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Hóa Đơn Bán</h2>
+
+<div ng-controller="oderctrl" ng-app="Giay">
+    <div id="dvContainer1">
+        <dl class="dl-horizontal">
+            <table class="table table-bordered table-striped" id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Ngày Đặt</th>
+                        <th>Số Điện Thoại</th>
+                        <th>Trạng Thái</th>
+                        <th>Ghi Chú</th>
+                        <th>Địa Chỉ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Html.DisplayFor(model => model.NgayDat)</td>
+                        <td>@Html.DisplayFor(model => model.SDT)</td>
+                        <td>@Html.DisplayFor(model => model.TrangThai)</td>
+                        <td>@Html.DisplayFor(model => model.GhiChu)</td>
+                        <td>@Html.DisplayFor(model => model.KhachHang.DiaChi)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </dl>
+        <h3>Chi Tiết Hóa Đơn</h3>
+        <ul>
+            @foreach (var item in Model.CT_HoaDonBan)
+            {
+                <table class="table table-bordered table-striped" id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Hình Ảnh </th>
+                            <th>Tên Sản Phẩm</th>
+                            <th>Kích Thước</th>
+                            <th>Tên Khách Hàng</th>
+                            <th> Số Lượng</th>
+                            <th> Đơn Giá </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="@item.SanPham.HinhAnh" style="width: 130px"</td>
+                            <td>@item.SanPham.TenSP </td>
+                            <td>@item.SanPham.KichThuoc</td>
+                            <td>@item.HoaDonBan.Username</td>
+                            <td>@item.SoLuong</td>
+                            <td>@string.Format("{0:#,##0.đ}", @item.DonGia)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a style="float:right;" class="btn btn-primary float-left" ng-click="printToCart('dvContainer1')">In hoá đơn</a>
+            }
+        </ul>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Thoát ", "Exit", new { id = Model.MaHDB }) |
+    @Html.ActionLink("Quay Lại", "Index")
+</p>
+@section scripts{
+<script>
+    var myapp = angular.module("Giay", []);
+    myapp.controller("oderctrl", function ($scope, $http) {
+        $scope.printToCart = function (dvContainer1) {
+            var innerContents = document.getElementById(dvContainer1).innerHTML;
+            var popupWinindow = window.open('', '_blank', 'width=600,height=700,scrollbars=no,menubar=no,toolbar=no,location=no,status=no,titlebar=no');
+            popupWinindow.document.open();
+            popupWinindow.document.write('<html><head><link rel="stylesheet" type="text/css" href=/Content/pdf.css?662019 /><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular-csp.min.css" /><link rel="stylesheet" type="text/css" href="https://cdn.usebootstrap.com/bootstrap/4.4.1/css/bootstrap.min.css" /></head><body onload="window.print()">' + innerContents + '</html>');
+            popupWinindow.document.close();
+        }
+    })
+</script>
+} 

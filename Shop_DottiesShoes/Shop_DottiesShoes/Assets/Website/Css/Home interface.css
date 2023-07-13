@@ -1,0 +1,764 @@
+﻿.add-on img {
+    width: 100%;
+}
+.Homeinterface-Navar {
+    height: 700px;
+    width: 100%;
+}
+
+.Homeinterface-Navar .Homeinterface-Navar-Img img {
+        width: 100%;
+}
+.slide-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 533px;
+    margin-left: -395px;
+}
+.slide-main {
+    position: absolute;
+    width: 100%;
+}
+.item {
+    display: inline-block;
+    position: relative;
+    margin: 25px 76px 60px 0px;
+    margin-left: 0px;
+}
+.link-banner {
+    overflow: hidden;
+}
+.text {
+    position: absolute;
+    top :50%;
+    left:50%;
+    transform:translate(-50%,50%);
+    font-size:20px;
+    color:#fff;
+    font-weight:bolder;
+}
+.slide-btn-left {
+    font-size: 20px;
+    color: #000;
+    border-radius: 25%;
+    padding: 2px 15px;
+    background: #fff;
+    position: absolute;
+    transform: translate(-50%,50%);
+    top: 25%;
+    left: 423px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.link-banner img{
+    width: 100%;
+} 
+
+.slide-btn-right {
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 30.5%;
+    right: -12px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #000;
+    border-radius: 25%;
+    padding: 2px 15px;
+    background: #fff;
+    background-color: transparent;
+}
+
+.slide-wrap .caption_banner_slide {
+    position: absolute;
+    width: 93%;
+    padding: 23px 15px;
+    bottom: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0px 0px -120px 0px;
+}
+    .slide-wrap .caption_banner_slide h3 {
+        font-size: 16px;
+        line-height: 22px;
+        margin: 0 0 12px;
+        color: #fff;
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        cursor: pointer;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+.slide-wrap .button {
+    padding: 5px 15px;
+}
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 28px;
+    line-height: normal;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: transparent;
+    -webkit-transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86),border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86),border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    z-index: 1;
+    color: #000000;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.button:before {
+    position: absolute;
+    content: '';
+    display: block;
+    left: -2px;
+    top: 0;
+    right: -2px;
+    bottom: 0;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+    z-index: -1;
+    background-color: #ffffff;
+    -webkit-transition: -webkit-transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: -webkit-transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86),-webkit-transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.col-inner {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+.mona_custom_title {
+    font-size: 32px;
+    font-weight: 900;
+    font-family: OneNikeCurrency,'FuturaW01-ExtraBoldCond 774896',Helvetica,Arial,sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .heading-font {
+    color: #1c1c1c;
+}
+.mona_custom_sub_title {
+    color: #999;
+    font-style: normal;
+    letter-spacing: .03em;
+    word-spacing: -0.05em;
+    font-family: OneNikeCurrency,Helvetica,Arial,sans-serif;
+    margin-top: 15px;
+}
+
+p {
+    margin-top: 0;
+}
+.lowercase {
+    text-transform: uppercase;
+    font-size: .97em;
+    cursor: pointer;
+    font-weight: bolder;
+    text-decoration: none;
+    border: 1px solid transparent;
+    margin-right: 1em;
+    line-height: 2.4em;
+    min-height: 2.5em;
+    padding: 0 1.2em;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+}
+
+.Homeinterface-Content-Font {
+    padding: 25px 0;
+    height: 50px;
+}
+
+    .Homeinterface-Content-Font h3 {
+        font-size: 37px;
+        line-height: 1.6;
+        margin: 0;
+        font-weight: 500;
+        line-height: 1.1;
+        font-family: Montserrat !important;
+    }
+    .Homeinterface-Content-Font p {
+        font-size: 12px;
+        margin: 0;
+        font-weight: 500;
+        line-height: 1.1;
+        font-family: Montserrat !important;
+        margin-left: 20px;
+        padding-top:15px;
+    }
+.Homeinterface-Content-FontAll ul {
+    display: flex;
+    justify-content: right;
+    margin-top: -38px;
+}
+.Homeinterface-Content-FontAll li {
+    margin: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Homeinterface-Content-FontAll  .Crgb{
+    color:red;
+}
+
+.Homeinterface-Content-ProductNew {
+    height: 470px;
+    width: 100%;
+}
+
+
+.Content_Center_Product_Font {
+    text-transform: uppercase;
+    font-size: .97em;
+    cursor: pointer;
+    font-weight: bolder;
+    text-decoration: none;
+    border: 1px solid transparent;
+    margin-right: 1em;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+}
+.Content_Center_Product_Jpg {
+    width: 245px;
+    height: 320px;
+}
+
+.Homeinterface-Content-ProductNew .Content_Center_Product_New > .Content_Center_Product_Jpg {
+    position: relative;
+}
+
+.Homeinterface-Right-Center-Product .Content_Center_Product_New > .Content_Center_Product_Jpg > img {
+    width: 100%;
+    height: 100%;
+}
+
+.Homeinterface-Right-Center-Product .Content_Center_Product_New > .Content_Center_Product_Jpg > .Content_Center_Product_Jpg_Hide {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: 1s;
+}
+
+    .Homeinterface-Right-Center-Product .Content_Center_Product_New > .Content_Center_Product_Jpg > .Content_Center_Product_Jpg_Hide:hover {
+        opacity: 1;
+    }
+
+.Content_Center_Product_Font {
+    width: 211px;
+    height: 84px;
+}
+
+.Content_Center_Product .Content_Center_Product_Font {
+    text-align: left;
+}
+
+/*.Content_Center_Product_Name {
+    padding-top: 15px;
+    font-size: 20px;
+}*/
+    .Content_Center_Product_Name h6 {
+        font-family: 'Courier New', Courier, monospace;
+        padding-top: 10px;
+    }
+.Content_Center_Product_Name_H6 {
+    font-family: 'Courier New', Courier, monospace;
+}
+.Content_Center_Product_Price {
+    padding-top: 10px;
+}
+
+    .Content_Center_Product_Price span {
+        cursor: pointer;
+        font-weight: bolder;
+        text-decoration: none;
+        border: 1px solid transparent;
+        margin-right: 1em;
+        max-width: 100%;
+        text-rendering: optimizeLegibility;
+        font-family: "Roboto", sans-serif;
+        color: black;
+        font-size: 13.1px;
+    }
+
+.NavarHome_JPG{
+    height: 580px;
+    width: 100%;
+    padding-top: 65px;
+}
+.NavarHome_JPG1 {
+    height: 280px;
+    width: 80%;
+    padding-top: 60px;
+    margin-left: 130px;
+}
+del {
+    text-decoration: line-through;
+    float: right;
+    margin-top: -13px;
+    margin-right: -85px;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    font-size: 13.1px;
+}
+.heart {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+.previous-font h3 {
+    font-size: 23px;
+    margin: 23px 0px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.previous-font {
+    position: absolute;
+    width: 100%;
+    padding: 0 50px;
+    bottom: 50px;
+    color: #ffffff;
+}
+.Homeinterface-Content-New {
+    height: 455px;
+}
+
+.Homeinterface-Content-New-Men-Img {
+    overflow: hidden;
+}
+
+    .Homeinterface-Content-New-Men-Img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: all 0.8s ease;
+    }
+
+        .Homeinterface-Content-New-Men-Img img:hover {
+            transform: scale(1.5);
+        }
+
+
+.Homeinterface-Content-New-Men {
+    height: 450px;
+    width: 404px;
+    float: left;
+        margin: 45px 10px 0px 27px;
+}
+
+.Homeinterface-Header .sticky {
+    position: fixed;
+    left: 0;
+    padding: 15px 5%;
+    background-color: #ffffff;
+    top: 0;
+    width: 100%;
+    height: 42px;
+    z-index: 1000;
+}
+
+.Homeinterface-Header-Menu {
+    display: flex;
+}
+
+.Head-Footer-Email {
+    padding-left: 15px;
+    padding-right: 45px;
+    padding-top: 1.5rem;
+    background: transparent
+}
+.Content_Center_Product_New {
+    /* display: inline-table; */
+    margin: 10px;
+    width: 307px;
+    height: 481px;
+    text-align: center;
+    float: left;
+}
+
+/*.Content_Center_Product_Jpg {
+    overflow: hidden;
+}
+
+    .Content_Center_Product_Jpg img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: all 0.8s ease;
+    }
+
+        .Content_Center_Product_Jpg img:hover {
+            transform: scale(1.5);
+        }*/
+
+
+/* Menu repon */
+/* Tablet */
+@media (max-width: 1023px) {
+    .Menu_Center_Ul {
+        display: none;
+    }
+
+    .btn-icon {
+        position: absolute;
+        top: 50%;
+        left: 38px;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+    }
+
+    .fa-bars {
+        display: none;
+    }
+}
+
+.Content_Center_Product_Name a {
+    font-size: 0.97em;
+    cursor: pointer;
+    font-weight: bolder;
+    text-decoration: none;
+    border: 1px solid transparent;
+    margin-right: 1em;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: "Roboto", sans-serif;
+    color: black;
+
+}
+
+
+.red-line {
+    width: 5rem;
+    height: 0.25rem;
+    background: #cf0a2c;
+}
+
+.mt-4, .my-4 {
+    margin-top: 1.5rem !important;
+}
+
+.mb-3, .my-3 {
+    margin-bottom: 1rem !important;
+}
+
+.word-break {
+    word-wrap: break-word;
+}
+
+
+.didot {
+    font-family: ITC Garamond W01;
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+}
+
+body .font-body-large {
+    font-family: Proxima Nova W01,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+    color: #000;
+    letter-spacing: 0;
+    line-height: 1.5rem;
+}
+
+body .font-body-large {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+body .font-body-large, body .font-body-small {
+    font-family: Proxima Nova W01,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: beige;
+    letter-spacing: 0;
+}
+
+.word-break {
+    word-wrap: break-word;
+    color: beige;
+}
+
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.nb-button.button-primary {
+    background-color: #cf0a2c;
+    border-color: #cf0a2c;
+    color: #fff !important;
+}
+
+[role=button] {
+    cursor: pointer;
+}
+
+.nb-button {
+    display: inline-block;
+    min-width: 6.5rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: .875rem;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 0;
+    border: 0.125rem solid transparent;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    transition: all .2s;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 3rem;
+    vertical-align: middle;
+}
+
+.z-index-banner {
+    z-index: -1;
+}
+
+.add-actions {
+    position: absolute;
+    top: 357px;
+    left: 107px;
+}
+
+.font-header-2 {
+    color: #333;
+    font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 120%;
+    padding: 10px 15px;
+    height: 25px;
+    font-weight: 700;
+    font-size: 19px;
+}
+h2 {
+    font-weight: 580;
+    font-family: Proxima Nova W01,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.add-actions-link {
+    text-align: center;
+    height: 75px;
+}
+
+.tab-layout .nav-tabs {
+    border-bottom: none;
+    white-space: nowrap;
+    overflow-x: auto;
+    display: block;
+    text-align: center;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ccc;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.nav-tabs {
+    border-bottom: 0 solid #dee2e6;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+dl, ol, ul {
+    margin-top: 0;
+}
+
+.tab-layout .nav-item {
+    min-width: 13.875rem;
+    display: inline-block;
+    color: #333;
+    font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 120%;
+    padding: 0px 15px;
+    height: 25px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.nav-fill .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: 0;
+}
+
+/*.tab-layout .nav-tabs .nav-link.active {*/
+/*    color: #cf0a2c;*/
+    /*border-bottom: 0.25rem solid #cf0a2c;
+    padding-bottom: 8px;
+}*/
+
+.tab-layout .nav-tabs .nav-link {
+    font-size: 0.985rem;
+    padding-bottom: 11px;
+/*    border-bottom: 1px solid #151415;*/
+    margin-left: -2px;
+    margin-right: -2px;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: transparent;
+    color: black;
+}
+hr {
+    width: 55%;
+    margin-left: 293px;
+    color: black;
+}
+#forhim {
+    color: #cf0a2c;
+    border-bottom: 0.25rem solid #cf0a2c;
+    padding-bottom: 8px;
+    margin-right: 55px;
+}
+
+.container {
+    max-width: 1440px;
+}
+.row {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.nb-button.button-secondary {
+    border-color: #cf0a2c;
+    color: #cf0a2c !important;
+    background-color: #fff;
+}
+
+.nb-button.button-full-width {
+    width: 100%;
+    margin-right: 290px;
+    cursor: pointer;
+}
+
+.nb-button {
+    display: inline-block;
+    min-width: 6.5rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: .875rem;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 0;
+    border: 0.125rem solid transparent;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    transition: all .2s;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 3rem;
+    vertical-align: middle;
+}
+.badge-counter {
+    width: 100%;
+    height: 250px;
+}
+.animated {
+    text-align: center;
+    padding: 80px;
+}
+p.active-font-ppp {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: Proxima Nova W01,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    color: #000;
+    letter-spacing: 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.zmdi-wallpaper {
+    display: flex;
+}
+.zmdi-format-quote {
+    width: 702px;
+    height: 850px;
+}
+.zmdi-format-quote img {
+width: 100%;
+}
+
+.font-header-2 {
+    font-size: 1.5rem;
+    color: #000;
+    line-height: 2rem;
+}
+.nb-button {
+    display: inline-block;
+    min-width: 6.5rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: .875rem;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 0;
+    border: 0.125rem solid transparent;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    transition: all .2s;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 3rem;
+    vertical-align: middle;
+}
+    .nb-button.button-primary {
+        background-color: #cf0a2c;
+        border-color: #cf0a2c;
+        color: #fff !important;
+        margin: 12px 0px 2px 34px;
+    }
+.body-large {
+    line-height: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    font-size: 1rem;
+    letter-spacing: 0;
+    font-family: Proxima Nova W01,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,sans-serif;
+    margin-left: 15px;
+}
+.font-header-2 {
+    font-size: 1.5rem;
+    color: #000;
+    line-height: 2rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    font-family: Proxima Nova W01,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,sans-serif;
+    margin-left: 15px;
+}
+

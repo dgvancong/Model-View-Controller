@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/Website/Css/LoginAdmin.css">
+    <link rel="icon" href="/Album/BoCuc/z3398273747863_81c41ce47a59fbf2a5832130c0d3308e.jpg">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Dotie Shoes</title>
+</head>
+<body>
+    <div class="Container">
+        <form id="login">
+            <h2>
+                ĐĂNG NHẬP HỆ THỐNG
+            </h2>
+            <div class="Container-fail">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Tài Khoản" id="tk" required>
+            </div>
+            <div class=" Container-fail">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Mật Khẩu" id="mk" required>
+            </div>
+            <button>Đăng Nhập</button>
+        </form>
+    </div>
+
+    <script>
+        var list = JSON.parse(localStorage.getItem('Staff')) || [{
+            manv: 'admin',
+            mknv: '123',
+            chucvu: 'Quản lý',
+            tennv: '',
+            trangthai: 'Hoạt động'
+        }];
+
+        $('#login').submit(function (event) {
+            var taikhoan = $('#tk').val();
+            var matkhau = $('#mk').val();
+            for (let x of list) {
+                if ((taikhoan == x.manv && matkhau == x.mknv && x.chucvu == "Quản lý" && x.trangthai == "Hoạt động")) {
+                    var user = {
+                        manv: x.manv,
+                        tennv: x.tennv,
+                        emailnv: x.emailnv,
+                        sdtnv: x.sdtnv,
+                        chucvu: x.chucvu,
+                        mknv: x.mknv
+                    };
+                    localStorage.setItem('user', JSON.stringify(user));
+                    window.location.href = "/ADminDVC/TrangChu/Index";
+                    break;
+                }
+                else if (taikhoan == x.manv && matkhau == x.mknv && x.trangthai == "Khóa") {
+                    alert("Tài khoản hiện bị khóa! Vui lòng liên hệ quản lý!");
+                    break;
+                }
+                else if (taikhoan != x.manv && matkhau != x.mknv) {
+                    alert("Tên đăng nhập hoặc mật khẩu sai! Vui lòng nhập lại!");
+                    break;
+                }
+            }
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>

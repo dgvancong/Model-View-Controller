@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.Title = "SignupInterface";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title> Dotie Shoes - Signup</title>
+<head>
+    <link rel="stylesheet" href="/Assets/Website/Css/Signup interface.css">
+</head>
+<div class="Content">
+    <div class="Content_Left">
+        <h1 class="Content_left_font"> Tạo Tài Khoản </h1>
+        <h1 class="Content_left_font_hr"></h1>
+    </div>
+    <div class="Content_right">
+        <div class="Content_right_login_dk">
+            <input type="text" name="LoginUser" placeholder="Họ" id="lastname">
+        </div>
+        <div class="Content_right_login_dk_1">
+            <input type="text" name="LoginUser" placeholder="Tên" id="username">
+        </div>
+        <div class="Content_right_login_dk_2">
+            <form id="male">
+                <input name="gender" type="radio" value="Nam" />Nam
+                <input name="gender" type="radio" value="Nữ" />Nữ
+                <input name="gender" type="radio" value="Khác" />Khác
+            </form>
+        </div>
+        <div class="Content_right_login_dk_3">
+            <input type="datetime" name="LoginUser" placeholder="mm / dd / yyyy." id="datetime">
+        </div>
+        <div class="Content_right_login">
+            <input type="email" name="LoginUser" placeholder="Email" id="email">
+        </div>
+        <div class="Content_right_password">
+            <input type="password" name="LoginPassword" placeholder="Mật Khẩu" id="password">
+        </div>
+        <div class="Content_right_font">
+            This site is protected by reCAPTCHA and the Google
+            <span><a href="https://policies.google.com/privacy">Privacy Policy</a></span>
+            and
+            <span><a href="https://policies.google.com/terms">Terms of Service</a></span>
+            apply
+        </div>
+        <div class="Content_right_test" id="dangky">
+            <button onclick="DangKy()"> Đăng Ký </button>
+        </div>
+        <div class="Content_right_test_0">
+            <p><i class="fa-solid fa-arrow-left-long"></i><a href="LoginInterface">Đăng Nhập</a></p>
+        </div>
+    </div>
+    <script>
+        var list = JSON.parse(localStorage.getItem('Customer')) || [];
+
+        function DangKy() {
+            var lastname = document.getElementById("lastname").value;
+            var username = document.getElementById("username").value;
+            var male = document.getElementById("male").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var atposition = email.indexOf("*");
+            var dotposition = email.lastIndexOf(".");
+
+            if (lastname == null || lastname == "") {
+                alert("Họ  người dùng không được để trống! Vui lòng nhập lại!");
+                return false;
+            }
+
+            if (username == null || username == "") {
+                alert("Tên người dùng không được để trống! Vui lòng nhập lại!");
+                return false;
+            }
+            else if (email == null || email == "") {
+                alert("Email khách hàng không hợp lệ! Vui lòng nhập lại!");
+                return false;
+            }
+            else if (password == null || password == "") {
+                alert("Mật khẩu khách hàng không được để trống! Vui lòng nhập lại!");
+                return false;
+            }
+
+            console.log("AddCustomer");
+            if (list == null) list = [];
+            var customer = {
+                "username": username,
+                "email": email,
+                "password": password
+            };
+            list.push(customer);
+            localStorage.setItem("Customer", JSON.stringify(list));
+            alert("Đăng ký thành công!");
+            location.reload();
+        }
+    </script>
+</div>
